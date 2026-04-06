@@ -10,11 +10,11 @@ const getAll = async () => {
   return await response.json()
 }
 
-const createNew = async (content) => {
+const createNew = async (object) => {
   const response = await fetch(baseUrl, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ content, important: false }),
+    body: JSON.stringify(object),
   })
   
   if (!response.ok) {
