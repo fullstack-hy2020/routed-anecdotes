@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 
-const CreateNew = ({ addNew }) => {
+const CreateNew = ({ addAnecdote }) => {
   const [content, setContent] = useState('')
   const [author, setAuthor] = useState('')
   const [info, setInfo] = useState('')
@@ -9,7 +9,7 @@ const CreateNew = ({ addNew }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    addNew({ content, author, info, votes: 0 })
+    addAnecdote({ content, author, info, votes: 0 })
     navigate('/')
   }
 
