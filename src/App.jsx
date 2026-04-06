@@ -24,7 +24,7 @@ const App = () => {
     }
   ])
 
-  const addNew = (anecdote) => {
+  const addAnecdote = (anecdote) => {
     setAnecdotes(anecdotes.concat({ ...anecdote, id: Math.round(Math.random() * 10000) }))
   }
 
@@ -35,7 +35,7 @@ const App = () => {
         <Menu />
         <Routes>
           <Route path="/" element={<AnecdoteList anecdotes={anecdotes} />} />
-          <Route path="/create" element={<CreateNew addNew={addNew} />} />
+          <Route path="/create" element={<CreateNew addNew={addAnecdote} />} />
           <Route path="/about" element={<About />} />
         </Routes>
         <Footer />
