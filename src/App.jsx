@@ -35,7 +35,7 @@ const App = () => {
         <Menu />
         <Routes>
           <Route path="/" element={<AnecdoteList anecdotes={anecdotes} />} />
-          <Route path="/create" element={<CreateNew addNew={addAnecdote} />} />
+          <Route path="/create" element={<CreateNew addAnecdote={addAnecdote} />} />
           <Route path="/about" element={<About />} />
         </Routes>
         <Footer />
